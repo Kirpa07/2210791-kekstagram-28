@@ -1,4 +1,5 @@
 import {photoStream} from './data.js';
+import { renderThumbnail } from './thumbmails.js';
 
-// eslint-disable-next-line no-console
-console.log(photoStream);
+renderThumbnail(photoStream);
+

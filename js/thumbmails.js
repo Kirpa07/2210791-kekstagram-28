@@ -11,10 +11,14 @@ const createThumbnail = function ({comments, url, description, likes}) {
   return thumbnail;
 };
 
-const renderThumbnail = function(pictures) {
+const renderThumbnail = function({ pictures, onClick }) {
   const fragment = document.createDocumentFragment();
   pictures.forEach((picture) => {
     const thumbnail = createThumbnail(picture);
+    thumbnail.addEventListener('click', (e) => {
+      e.preventDefault();
+      onClick(picture);
+    });
     fragment.appendChild(thumbnail);
   });
   container.appendChild(fragment);

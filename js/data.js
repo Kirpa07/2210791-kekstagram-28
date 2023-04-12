@@ -19,7 +19,7 @@ let photoID = 0;
 
 const createComment = () => ({
   id: commentID++,
-  avatar: `img/avatar - ${getRandomInteger(0, 6)}.svg`,
+  avatar: `img/avatar-${getRandomInteger(1, 6)}.svg`,
   message: getRandomElement(MESSAGES),
   name: getRandomElement(NAMES),
 });

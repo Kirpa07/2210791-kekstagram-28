@@ -29,7 +29,7 @@ const createPhoto = () => ({
   url: `photos/${photoID}.jpg`,
   description: getRandomElement(DESCRIPTIONS),
   likes: getRandomInteger(15, 200),
-  comments: Array.from({length: getRandomInteger(1, 5)}, createComment)
+  comments: Array.from({length: getRandomInteger(6, 30)}, createComment)
 });
 
 const photoStream = Array.from({length: 25}, createPhoto);
